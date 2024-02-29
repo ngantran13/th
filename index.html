@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thi Trắc Nghiệm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="inputForm">
+        <h2>Nhập thông tin cá nhân</h2>
+        <input type="text" id="fullName" placeholder="Họ và tên"><br>
+        <input type="text" id="dob" placeholder="Ngày tháng năm sinh"><br>
+        <input type="text" id="studentID" placeholder="Mã sinh viên"><br>
+        <input type="text" id="class" placeholder="Lớp"><br>
+        <button onclick="startExam()">Bắt đầu thi</button>
+    </div>
+</div>
+
+<div id="exam" style="display:none;">
+    <h2>Bài thi trắc nghiệm</h2>
+    <div class="question">
+        <p>Câu 1: Logo của đội bóng Chelsea là con sư tử?d</p>
+        <input type="radio" name="q1" value="true"> Đúng
+        <input type="radio" name="q1" value="false"> Sai
+        <p>Câu 2: Khỉ là loài vật đầu tiên bay vào không gian ngoài con người?s</p>
+        <input type="radio" name="q2" value="true"> Đúng
+        <input type="radio" name="q2" value="false"> Sai
+        <p>Câu 3: Châu Phi là lục địa duy nhất nằm ở cả 4 bán cầu?</p>
+        <input type="radio" name="q3" value="true"> Đúng
+        <input type="radio" name="q3" value="false"> Sai
+        <p>Câu 4: Frankenstein là một con quái vật được tạo ra bởi một nhà khoa học điên?s</p>
+        <input type="radio" name="q4" value="true"> Đúng
+        <input type="radio" name="q4" value="false"> Sai
+        <p>Câu 5: Louis Braille – người đã tạo ra hệ thống chữ nổi cho người mù, chính ông cũng bị mù?</p>
+        <input type="radio" name="q5" value="true"> Đúng
+        <input type="radio" name="q5" value="false"> Sai
+        <p>Câu 6: 1 con bạch tuộc có 7 trái tim?s</p>
+        <input type="radio" name="q6" value="true"> Đúng
+        <input type="radio" name="q6" value="false"> Sai
+        <p>Câu 7: Có một nguyên tố hoá học được gọi là americium, được đặt tên theo châu Mỹ?</p>
+        <input type="radio" name="q7" value="true"> Đúng
+        <input type="radio" name="q7" value="false"> Sai
+        <p>Câu 8: Dơi bị mù?s</p>
+        <input type="radio" name="q8" value="true"> Đúng
+        <input type="radio" name="q8" value="false"> Sai
+        <p>Câu 9: Đại Tây Dương là đại dương sâu nhất thế giới?s</p>
+        <input type="radio" name="q9" value="true"> Đúng
+        <input type="radio" name="q9" value="false"> Sai
+        <p>Câu 10: Bản dịch chính xác nguồn gốc của từ “chiếu tướng” là “nhà vua bị bắt”?s</p>
+        <input type="radio" name="q10" value="true"> Đúng
+        <input type="radio" name="q10" value="false"> Sai
+        <p>Câu 11: 1 + 1 = </p>
+        <input type="radio" name="q11" value="A"> 2
+        <input type="radio" name="q11" value="B"> 3
+        <input type="radio" name="q11" value="C"> 4
+        <input type="radio" name="q11" value="D"> 1
+        <p>Câu 12: 1 + 2 = </p>
+        <input type="radio" name="q12" value="A"> 2
+        <input type="radio" name="q12" value="B"> 3
+        <input type="radio" name="q12" value="C"> 4
+        <input type="radio" name="q12" value="D"> 1
+        <p>Câu 13: 1 + 3 = </p>
+        <input type="radio" name="q13" value="A"> 2
+        <input type="radio" name="q13" value="B"> 3
+        <input type="radio" name="q13" value="C"> 4
+        <input type="checkbox" name="q13" value="D"> 1
+        <p>Câu 14: 1 * 0 = </p>
+        <input type="radio" name="q14" value="A"> 2
+        <input type="radio" name="q14" value="B"> 3
+        <input type="radio" name="q14" value="C"> 4
+        <input type="checkbox" name="q14" value="D"> 0
+        <p>Câu 15: 1 * 1 = </p>
+        <input type="radio" name="q15" value="A"> 2
+        <input type="radio" name="q15" value="B"> 3
+        <input type="radio" name="q15" value="C"> 4
+        <input type="radio" name="q15" value="D"> 1
+        <p>Câu 16: 1 / 0 = </p>
+        <input type="radio" name="q16" value="A"> 2
+        <input type="radio" name="q16" value="B"> 3
+        <input type="radio" name="q16" value="C"> 4
+        <input type="radio" name="q16" value="D"> Không xác định
+        <p>Câu 17: 2 + 1 = </p>
+        <input type="radio" name="q17" value="A"> 2
+        <input type="radio" name="q17" value="B"> 3
+        <input type="radio" name="q17" value="C"> 4
+        <input type="radio" name="q17" value="D"> 0
+        <p>Câu 18: 2 * 0 = </p>
+        <input type="radio" name="q18" value="A"> 2
+        <input type="radio" name="q18" value="B"> 3
+        <input type="radio" name="q18" value="C"> 4
+        <input type="radio" name="q18" value="D"> 0
+        <p>Câu 19: 2 * 2 = </p>
+        <input type="radio" name="q19" value="A"> 2
+        <input type="radio" name="q19" value="B"> 3
+        <input type="radio" name="q19" value="C"> 4
+        <input type="radio" name="q19" value="D"> 0
+        <p>Câu 20: 4 / 2 = </p>
+        <input type="radio" name="q20" value="A"> 2
+        <input type="radio" name="q20" value="B"> 3
+        <input type="radio" name="q20" value="C"> 4
+        <input type="radio" name="q20" value="D"> 0
+        <p>Câu 21:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q21" value="A"> 2
+        <input type="checkbox" name="q21" value="B"> 3
+        <input type="checkbox" name="q21" value="C"> 4
+        <input type="checkbox" name="q21" value="D"> 0
+        <p>Câu 22:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q22" value="A"> 2
+        <input type="checkbox" name="q22" value="B"> 3
+        <input type="checkbox" name="q22" value="C"> 4
+        <input type="checkbox" name="q22" value="D"> 0
+        <p>Câu 23:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q23" value="A"> 5
+        <input type="checkbox" name="q23" value="B"> 4
+        <input type="checkbox" name="q23" value="C"> 3
+        <input type="checkbox" name="q23" value="D"> 02
+        <p>Câu 24:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q24" value="A"> 2
+        <input type="checkbox" name="q24" value="B"> 3
+        <input type="checkbox" name="q24" value="C"> 4
+        <input type="checkbox" name="q24" value="D"> 0
+        <p>Câu 25:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q25" value="A"> 2
+        <input type="checkbox" name="q25" value="B"> 3
+        <input type="checkbox" name="q25" value="C"> 4
+        <input type="checkbox" name="q25" value="D"> 0
+        <p>Câu 26:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q26" value="A"> 2
+        <input type="checkbox" name="q26" value="B"> 3
+        <input type="checkbox" name="q26" value="C"> 4
+        <input type="checkbox" name="q26" value="D"> 0
+        <p>Câu 27:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q27" value="A"> 2
+        <input type="checkbox" name="q27" value="B"> 3
+        <input type="checkbox" name="q27" value="C"> 4
+        <input type="checkbox" name="q27" value="D"> 0
+        <p>Câu 28:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q28" value="A"> 2
+        <input type="checkbox" name="q28" value="B"> 3
+        <input type="checkbox" name="q28" value="C"> 4
+        <input type="checkbox" name="q28" value="D"> 0
+        <p>Câu 29:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q29" value="A"> 2
+        <input type="checkbox" name="q29" value="B"> 3
+        <input type="checkbox" name="q29" value="C"> 4
+        <input type="checkbox" name="q29" value="D"> 0
+        <p>Câu 30:  Câu hỏi chọn nhiều đáp án</p>
+        <input type="checkbox" name="q30" value="A"> 2
+        <input type="checkbox" name="q30" value="B"> 3
+        <input type="checkbox" name="q30" value="C"> 4
+        <input type="checkbox" name="q30" value="D"> 0
+        <p>Câu 31: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q31" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 32: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q32" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 33: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q33" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 34: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q34" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 35: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q35" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 36: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q36" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 37: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q37" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 38: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q38" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 39: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q39" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+        <p>Câu 40: Đây là câu hỏi trả lời tự luận</p>
+        <textarea id="q40" rows="4" cols="50" placeholder="Nhập câu trả lời của bạn"></textarea>
+    </div>
+
+    <button onclick="submitExam()">Nộp bài</button>
+</div>
+
+<div class="container">
+    <div id="result" style="display:none;">
+        <h2>Kết quả bài thi</h2>
+        <p id="fullNameResult"></p>
+        <p id="dobResult"></p>
+        <p id="studentIDResult"></p>
+        <p id="classResult"></p>
+        <div id="answerResult"></div>
+        <p id="score"></p>
+    </div>
+</div>
+
+<script>
+    // JavaScript code
+    var correctAnswers = {
+        q1: true,
+        q2: false,
+        q3: true,
+        q4: false,
+        q5: true,
+        q6: false,
+        q7: true,
+        q8: false,
+        q9: false,
+        q10: false,
+        q11: 'A',
+        q12:'B',
+        q13:'C',
+        q14:'D',
+        q15:'D',
+        q16:'D',
+        q17:'B',
+        q18:'D',
+        q19:'C',
+        q20:'A',
+        q21: ["A", "B", "C"],
+        q22: ["B", "C"],
+        q23: ["A", "D"],
+        q24: ["A", "B", "D"],
+        q25: ["A", "B"],
+        q26: ["C", "D"],
+        q27: ["A", "C", "D"],
+        q28: ["A", "B", "D"],
+        q29: ["A", "B"],
+        q30: ["B", "C", "D"],
+        q31: "Câu trả lời cho câu hỏi số 31",
+        q32: "Câu trả lời cho câu hỏi số 32",
+        q33: "Câu trả lời cho câu hỏi số 31",
+        q34: "Câu trả lời cho câu hỏi số 32",
+        q35: "Câu trả lời cho câu hỏi số 31",
+        q36: "Câu trả lời cho câu hỏi số 32",
+        q37: "Câu trả lời cho câu hỏi số 31",
+        q38: "Câu trả lời cho câu hỏi số 32",
+        q39: "Câu trả lời cho câu hỏi số 31",
+        q40: "Câu trả lời cho câu hỏi số 32",
+    };
+
+    // Hàm bắt đầu thi
+    function startExam() {
+        document.getElementById('inputForm').style.display = 'none';
+        document.getElementById('exam').style.display = 'block';
+    }
+
+    // Hàm nộp bài
+    function submitExam() {
+        document.getElementById('exam').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+
+        var fullName = document.getElementById('fullName').value;
+        var dob = document.getElementById('dob').value;
+        var studentID = document.getElementById('studentID').value;
+        var classInfo = document.getElementById('class').value;
+
+        document.getElementById('fullNameResult').innerText = 'Họ và tên: ' + fullName;
+        document.getElementById('dobResult').innerText = 'Ngày tháng năm sinh: ' + dob;
+        document.getElementById('studentIDResult').innerText = 'Mã sinh viên: ' + studentID;
+        document.getElementById('classResult').innerText = 'Lớp: ' + classInfo;
+
+        var score = calculateScore();
+        document.getElementById('score').innerText = 'Điểm số: ' + score;
+    }
+
+    // Hàm tính điểm
+    function calculateScore() {
+        var score = 0;
+        for (var question in correctAnswers) {
+            var userAnswer;
+            if (question.startsWith('q') && parseInt(question.slice(1)) >= 31) {
+                userAnswer = document.getElementById(question).value.trim();
+                if (userAnswer.length !== 0) {
+                    score++;
+                }
+            } else if (question.startsWith('q') && parseInt(question.slice(1)) >= 21) { // Kiểm tra câu hỏi từ câu thứ 21 đến câu thứ 30 (chọn nhiều đáp án)
+                var selectedAnswers = document.querySelectorAll('input[name="' + question + '"]:checked');
+                var selectedValues = [];
+                selectedAnswers.forEach(function(answer) {
+                    selectedValues.push(answer.value);
+                });
+                if (selectedValues.length === correctAnswers[question].length && selectedValues.every(function(value) {
+                    return correctAnswers[question].includes(value);
+                })) {
+                    score++;
+                }
+            } else { // Xử lý các câu hỏi trước đó (chọn 1 đáp án)
+                userAnswer = document.querySelector('input[name="' + question + '"]:checked');
+                if (userAnswer && userAnswer.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+        }
+        return score;
+    }
+
+</script>
+</body>
+</html>
